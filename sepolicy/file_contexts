@@ -24,3 +24,13 @@
 
 # Widevine
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service.widevine                     u:object_r:hal_drm_widevine_exec:s0
+
+# OPShit KCAL & DC Dimmer
+/sys/devices/platform/kcal_ctrl.0/kcal                          u:object_r:sysfs_livedisplay_tuneable:s0
+/sys/devices/platform/kcal_ctrl.0/kcal_enable                   u:object_r:sysfs_livedisplay_tuneable:s0
+/sys/devices/platform/kcal_ctrl.0/kcal_cont                     u:object_r:sysfs_livedisplay_tuneable:s0
+/sys/devices/platform/kcal_ctrl.0/kcal_sat                      u:object_r:sysfs_livedisplay_tuneable:s0
+/sys/devices/platform/kcal_ctrl.0/kcal_hue                      u:object_r:sysfs_livedisplay_tuneable:s0
+/sys/devices/platform/kcal_ctrl.0/kcal_min                      u:object_r:sysfs_livedisplay_tuneable:s0
+/sys/devices/platform/kcal_ctrl.0/kcal_val                      u:object_r:sysfs_livedisplay_tuneable:s0
+/sys/module/mdss_fb/parameters/backlight_dimmer                 u:object_r:sysfs_livedisplay_tuneable:s0
