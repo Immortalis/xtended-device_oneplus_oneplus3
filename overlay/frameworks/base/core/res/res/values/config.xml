@@ -458,11 +458,13 @@
     <string name="config_qualified_networks_service_package" translatable="false">vendor.qti.iwlan</string>
 
     <!-- Whether to artificially interpret all signal strengths as one bar higher than they actually are -->
-    <bool name="config_inflateSignalStrength">true</bool>
+    <bool name="config_inflateSignalStrength">false</bool>
     
     <!-- Whether device supports sensor based doze customizations -->
     <bool name="config_dozePulseTilt">true</bool>
     <bool name="config_dozePulseProximity">true</bool>
     <bool name="config_deviceHaveWakeUpProximity">true</bool>
+    <bool name="config_dozePulsePickup">true</bool>
+    <string name="config_dozePickupSensorType" translatable="false">com.oneplus.sensor.pickup</string>
 
 </resources>
