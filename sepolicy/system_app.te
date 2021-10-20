@@ -1,11 +1,27 @@
+# Fingerprint
 allow system_app sysfs_fpc:dir search;
 allow system_app sysfs_fpc:file rw_file_perms;
-#TouchPanel
+
+# Touchpanel
 allow system_app proc_touchpanel:dir search;
 allow system_app proc_touchpanel:file rw_file_perms;
-#OPShit
-allow system_app sysfs:file write;
+
+# OPShit
+
+### This rule triggers neverallow policy
+# allow system_app sysfs:file write;
+
+### Tri-state switch?
 allow system_app sysfs_switch:dir search;
-#Spectrum
+
+### To access vibration strength
+allow system_app sysfs_vibrator:dir search;
+allow system_app sysfs_vibrator:file rw_file_perms;
+
+### To control display panel modes, DC dimmer & HBM mode
+allow system_app sysfs_livedisplay_tuneable:dir search;
+allow system_app sysfs_livedisplay_tuneable:file rw_file_perms;
+
+# Spectrum
 allow system_app spectrum_prop:property_service set;
 get_prop(system_app, spectrum_prop);
